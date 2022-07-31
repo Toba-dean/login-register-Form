@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <title>Document</title>
+  <title>Form</title>
 </head>
 
 <body>
@@ -70,14 +70,19 @@
       <div class="form signup">
         <span class="title">Register</span>
 
-        <form action="#">
+        <form action="#" class="signUp">
           <div class="input-field">
             <input 
             type="name" 
             name="name" 
             placeholder="Enter your Name"
+            id="user-input"
           >
             <i class="uil uil-user"></i>
+            <i class="uil uil-check-circle circle"></i>
+            <i class="uil uil-exclamation-circle exclaim"></i>
+
+            <small class="error">This is the error</small>
           </div>
 
           <div class="input-field">
@@ -85,8 +90,13 @@
             type="email" 
             name="email" 
             placeholder="Enter your Email"
+            id="email-input"
           >
             <i class="uil uil-envelope icon"></i>
+            <i class="uil uil-check-circle circle"></i>
+            <i class="uil uil-exclamation-circle exclaim"></i>
+
+            <small class="error">This is the error</small>
           </div>
 
           <div class="input-field">
@@ -95,8 +105,13 @@
             name="email" 
             placeholder="Enter your password"
             class="password"
+            id="pass-input"
           >
             <i class="uil uil-lock icon"></i>
+            <i class="uil uil-check-circle circle"></i>
+            <i class="uil uil-exclamation-circle exclaim"></i>
+
+            <small class="error">This is the error</small>
           </div>
 
           <div class="input-field">
@@ -105,9 +120,14 @@
             name="email" 
             placeholder="Confirm password"
             class="password"
+            id="confirm-input"
           >
             <i class="uil uil-lock icon"></i>
             <i class="uil uil-eye-slash showHide"></i>
+            <i class="uil uil-check-circle circle"></i>
+            <i class="uil uil-exclamation-circle exclaim"></i>
+
+            <small class="error">This is the error</small>
           </div>
 
           <div class="checkbox-text">
@@ -120,7 +140,9 @@
           </div>
 
           <div class="input-field button">
-            <input type="button" value="Register Now">
+            <button>
+              Register now
+            </button>
           </div>
         </form>
 

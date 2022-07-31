@@ -84,7 +84,7 @@ body {
   position: relative;
 }
 
-.input-field input {
+.input-field input, button {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -111,17 +111,24 @@ body {
   right: 0;
   cursor: pointer;
   padding: 10px;
+  margin-right: 10px;
 }
 
 .input-field .icon {
   left: 0;
 }
 
+.input-field .circle, .exclaim {
+  right: -10px;
+  padding: 10px;
+  visibility: hidden;
+}
+
 .form .checkbox-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .checkbox-text .checkbox-content {
@@ -154,7 +161,7 @@ body {
   margin-top: 35px;
 }
 
-.form .button input {
+.form .button input, button {
   border: none;
   color: white;
   letter-spacing: 1px;
@@ -173,4 +180,39 @@ body {
 .form .login-signup {
   margin-top: 30px;
   text-align: center;
+}
+
+small {
+  display: block;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  visibility: hidden;
+}
+
+
+/* Validation */
+
+.input-field.success input {
+  border-bottom-color: #2ecc71;
+}
+
+.input-field.success .circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.input-field.error input {
+  border-bottom-color: #e74a3c;
+}
+
+.input-field.error .exclaim {
+  visibility: visible;
+  color: #e74a3c;
+}
+
+.input-field.error small {
+  visibility: visible;
+  color: #e74a3c;
 }
