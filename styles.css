@@ -1,0 +1,176 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.container {
+  position: relative;
+  max-width: 430px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.container .forms {
+  width: 200%;
+  display: flex;
+  align-items: center;
+  height: 440px;
+  transition: height 0.2s ease;
+}
+
+.container.active .forms {
+  height: 600px;
+}
+
+.container .signup {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.container .form {
+  padding: 30px;
+  width: 50%;
+  background-color: #fff;
+  transition: margin-left 0.2s ease;
+}
+
+.container.active .login {
+  margin-left: -50%;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.container.active .signup {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.container .form .title {
+  font-size: 27px;
+  font-weight: 600;
+  position: relative;
+}
+
+.container .form .title::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: rgba(13, 73, 58, 0.9);
+  border-radius: 25px;
+}
+
+.form .input-field {
+  margin-top: 30px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+}
+
+.input-field input:focus~i {
+  color: blue;
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.input-field .showHide {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.input-field .icon {
+  left: 0;
+}
+
+.form .checkbox-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-content input {
+  accent-color: #4070f4;
+  margin: 0 8px 0 4px;
+  cursor: pointer;
+}
+
+.form .text {
+  color: #333;
+  font-size: 14px;
+}
+
+.form a {
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+  color: rgba(10, 60, 48, 0.9);
+}
+
+.form .button {
+  margin-top: 35px;
+}
+
+.form .button input {
+  border: none;
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  background-color: #265d;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background-color: rgba(13, 73, 58, 0.9);
+}
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
